@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './task.css'
 import { useDispatch } from 'react-redux';
 import { addTask } from '../redux/actions';
 
@@ -21,7 +22,7 @@ const AddingTask = () => {
         onChange={(e) => setTask(e.target.value)}
         onKeyPress={(e) => e.key === 'Enter' && handleAddTask()}
       />
-      <button onClick={handleAddTask}>Add Task</button>
+      <button className='addtaskbutton' onClick={handleAddTask}>Add Task</button>
     </div>
   );
 };
